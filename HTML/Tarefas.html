@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas das Princesas</title>
+</head>
+<body>
+<h1>Tarefas das Princesas</h1>
+<h2>Lista de Tarefas</h2>
+<table>
+    <tr>
+        <th>Tarefa</th>
+        <th>Início</th>
+        <th>Fim</th>
+        <th>Status</th>
+    </tr>
+
+    <tr>
+        <td>Treinar postura</td>
+        <td>2025-02-01</td>
+        <td>2025-02-05</td>
+        <td>
+        <select>
+                    <option>Não Iniciada</option>
+                    <option>Em Andamento</option>
+                    <option>Concluída</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Treinar canto</td>
+            <td>2025-02-02</td>
+            <td>2025-02-07</td>
+            <td>
+                <select>
+                    <option>Não Iniciada</option>
+                    <option>Em Andamento</option>
+                    <option>Concluída</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Praticar etiqueta</td>
+            <td>2025-02-03</td>
+            <td>2025-02-09</td>
+            <td>
+                <select>
+                    <option>Não Iniciada</option>
+                    <option>Em Andamento</option>
+                    <option>Concluída</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+<h2>Nova tarefa</h2>
+
+<form>
+    <label for="princesa">Nome da Tarefa:</label><br>
+    <input type="text" id="tarefa" name="tarefa" required><br><br>
+    
+    
+    <label for="tarefa">Descrição da Tarefa:</label><br>
+    <input type="text" id="tarefa_desc" name="tarefa_desc" required><br><br>
+    
+    
+    <label for="inicio">Data de Início:</label><br>
+    <input type="date" id="inicio" name="inicio" required><br><br>
+    
+    
+    <label for="fim">Data de Finalização:</label><br>
+    <input type="date" id="fim" name="fim" required><br><br>
+    
+    
+    <button type="submit">Salvar Tarefa</button>
+    </form>
+
+    <botao>
+        <a href="http://127.0.0.1:5500/Dashboard.html">
+         <button>ver dashbord</button>   
+        </a>
+    </botao>
+
+</body>
+</html>
