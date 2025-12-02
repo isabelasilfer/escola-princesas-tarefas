@@ -1,0 +1,162 @@
+CREATE DATABASE escola_princesas;
+USE escola_princesas;
+
+CREATE TABLE USUARIO (
+    id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    idade INT,
+    email VARCHAR(150) UNIQUE,
+    telefone VARCHAR(20),
+    cpf VARCHAR(14) UNIQUE
+);
+
+CREATE TABLE TAREFAS (
+    id_tarefas INT PRIMARY KEY AUTO_INCREMENT,
+    id_usuario INT NOT NULL, 
+    
+    nome VARCHAR(100) NOT NULL,
+    descricao TEXT,
+    data_inicio DATE,
+    data_conclusao DATE,
+    status VARCHAR(50),
+    
+    FOREIGN KEY (id_usuario) 
+        REFERENCES USUARIO(id_usuario)
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE 
+);
+
+INSERT INTO USUARIO (nome, idade, email, telefone, cpf)
+VALUES ('Blair Willows', 17, 'willowsblair@gmail.com', '(31) 93678-4415', '963.785.423-69');
+
+INSERT INTO TA (nome, idade, email, telefone, cpf)
+VALUES ('Blair Willows', 17, 'willowsblair@gmail.com', '(31) 93678-4415', '963.785.423-69');
+
+INSERT INTO TAREFAS (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1, 
+    'Treino de Valsa Real', 
+    'Praticar os passos de abertura para o Baile da meia-noite.', 
+    '2025-12-05', 
+    '2025-12-12', 
+    'Pendente'
+);
+INSERT INTO TAREFAS (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1, 
+    'Treinar postura.', 
+    'Treinar postura equilibrando livros na cabeça.', 
+    '2026-2-15', 
+    '2026-6-15', 
+    'Pendente'
+);
+
+INSERT INTO TAREFAS (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1, 
+    'Treinar etiqueta.', 
+    'Treinamento de etiqueta para jantares formais.', 
+    '2026-03-01', 
+    '2026-05-31', 
+    'Pendente'
+);
+
+INSERT INTO TAREFAS (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1, 
+    'Treinar canto.', 
+    'Treinar canto para uma apresentação no teatro.', 
+    '2025-11-17', 
+    '2025-12-17', 
+    'Em Andamento'
+);
+
+ INSERT INTO tarefas (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1,
+    'Aula de Etiqueta Real',
+    'Aprender boas maneiras à mesa, postura e regras de comportamento real.',
+    '2025-11-20',
+    '2025-12-05',
+    'Pendente'
+);
+
+INSERT INTO tarefas (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1,
+    'Treinar Caminhada com Equilíbrio',
+    'Praticar caminhar com livros na cabeça para postura perfeita em eventos reais.',
+    '2025-11-22',
+    '2025-12-10',
+    'Em Andamento'
+);
+
+INSERT INTO tarefas (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1,
+    'Boas Maneiras Reais',
+    'Aprender a cumprimentar realeza, apresentações formais e regras de nobreza.',
+    '2025-11-25',
+    '2025-12-15',
+    'Pendente'
+);
+
+INSERT INTO tarefas (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1,
+    'Praticar Dança de Baile',
+    'Aprender os passos básicos de valsa e dança real para o baile anual.',
+    '2025-11-28',
+    '2025-12-20',
+    'Pendente'
+);
+
+INSERT INTO tarefas (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1,
+    'Cuidar do Mascote Real',
+    'Dar banho, alimentar e treinar o mascote oficial da escola de princesas.',
+    '2025-11-19',
+    '2025-11-30',
+    'Concluída'
+);
+
+INSERT INTO tarefas (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1,
+    'Cuidar do Jardim Real',
+    'Ajudar na manutenção das flores encantadas do jardim da realeza.',
+    '2025-11-21',
+    '2025-12-01',
+    'Em Andamento'
+);
+
+INSERT INTO tarefas (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1,
+    'Treinar Magia de Luz',
+    'Aprender a controlar magia básica de luz para cerimônias e apresentações.',
+    '2025-11-23',
+    '2025-12-22',
+    'Pendente'
+);
+
+INSERT INTO tarefas (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1,
+    'Organizar Baile Encantado',
+    'Preparar decoração, convites e ensaios para o baile da escola.',
+    '2025-11-26',
+    '2025-12-18',
+    'Em Andamento'
+);
+
+INSERT INTO tarefas (id_usuario, nome, descricao, data_inicio, data_conclusao, status)
+VALUES (
+    1,
+    'Resolver Conflitos com Elegância',
+    'Aprender a lidar com conflitos da corte de forma justa e educada.',
+    '2025-11-27',
+    '2025-12-09',
+    'Pendente'
+);
